@@ -1,6 +1,6 @@
 # 📊 Quantitative Trading Strategy: MACD + RSI
 
-This repository contains a backtest-ready quantitative trading strategy combining **MACD** and **RSI** indicators. The strategy is applied on **QQQ ETF (2019-2021)** using Python.
+This repository contains a backtest-ready quantitative trading strategy combining **MACD** and **RSI** indicators. The strategy is applied on **QQQ ETF (2019–2021)** using Python.
 
 ![Backtest Strategy Equity Curve](img/equity_curve.png)
 
@@ -37,6 +37,14 @@ Annualized Return:    +5.37%
 Sharpe Ratio:         1.49
 Max Drawdown:         -14.94%
 ```
+
+---
+
+## 📍 Buy/Sell Signal Chart
+
+Visualizes the MACD + RSI crossover-based signal points over QQQ price.
+
+![Signal Chart](img/signal_chart.png)
 
 ---
 
