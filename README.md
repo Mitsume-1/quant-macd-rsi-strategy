@@ -1,44 +1,58 @@
-# MACD + RSI Based Quantitative Trading Strategy
+# 📊 Quantitative Trading Strategy: MACD + RSI
 
-This project implements a simple long-only trading strategy using a combination of trend-following (MACD) and mean-reversion (RSI) signals. The backtest is conducted on historical QQQ ETF data from 2019 to 2021.
+This repository contains a backtest-ready quantitative trading strategy combining **MACD** and **RSI** indicators. The strategy is applied on **QQQ ETF (2019-2021)** using Python.
 
-## Strategy Logic
+![Backtest Strategy Equity Curve](img/equity_curve.png)
 
-- **Buy** when:
-  - MACD line crosses above the signal line (bullish momentum)
-  - or RSI falls below 30 (oversold)
-- **Sell** when:
-  - MACD line crosses below the signal line
-  - or RSI rises above 70 (overbought)
-- Daily rebalancing, position = 1 (long) or 0 (flat)
+---
 
-## Backtest Results
+## 📌 Project Overview
 
-- **Cumulative Return**: -8.84%
-- **Annualized Return**: -6.93%
-- **Sharpe Ratio**: -0.33
-- **Max Drawdown**: -14.94%
+- 📈 **Strategy Type**: Mean-Reversion + Trend-Following
+- 💡 **Indicators**: MACD, RSI, MA50/MA200
+- 📊 **Assets**: QQQ ETF (2019–2021)
+- 🔁 **Backtesting**: Long-only strategy with rule-based signal generation
+- 🧪 **Optimization**: RSI window + oversold threshold via Sharpe ratio
 
-## Parameter Tuning
+---
 
-- Grid search over:
-  - RSI window: 10, 14, 20
-  - Oversold threshold: 25, 30
-- **Best Sharpe Ratio**: 1.49 with window=20, threshold=25
+## 📁 Files
 
-## Visualizations
+| File | Description |
+|------|-------------|
+| `Quant_MACD_RSI_Strategy.ipynb` | Full notebook with logic, charts, and backtest results |
+| `Quant_trader.py` | Script version of the strategy |
+| `QQQ_2019_2021.csv` | Price data (local only) |
+| `img/equity_curve.png` | Strategy equity curve |
+| `img/signal_chart.png` | Buy/sell signal chart |
+| `.gitignore` | Ignore config and local files |
 
-![Equity Curve](img/equity_curve.png)
-![Trading Signals](img/signal_chart.png)
+---
+
+## 📉 Sample Performance Output
+
+```
+Cumulative Return:    +8.49%
+Annualized Return:    +5.37%
+Sharpe Ratio:         1.49
+Max Drawdown:         -14.94%
+```
+
+---
 
 ## 🛠 Tech Stack
 
-- Python (Pandas, Matplotlib)
-- Data source: `yfinance`
-- Single asset: QQQ
+- `Python 3.x`
+- `pandas`, `numpy`
+- `matplotlib`
+- `yfinance` for data download
 
-## Files
+---
 
-- `Quant_trader.py`: Full strategy logic
-- `QQQ_2019_2021.csv`: Backtest data
-- `img/`: Visualizations
+## 💼 Author
+
+- [Mitsume-1](https://github.com/Mitsume-1)
+
+---
+
+> ✅ This project is ideal for showcasing quantitative finance, Python modeling, and data-driven investment strategies in interviews or GitHub portfolios.
